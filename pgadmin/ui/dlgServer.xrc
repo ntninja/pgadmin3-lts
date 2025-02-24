@@ -191,7 +191,7 @@
                     <wildcard>*.crt</wildcard>
                     <style>wxFLP_USE_TEXTCTRL</style>
                   </object>
-                  <flag>wxEXPAND|wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
+                  <flag>wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
                   <border>4</border>
                 </object>
                 <object class="sizeritem">
@@ -207,7 +207,7 @@
                     <wildcard>*.crl</wildcard>
                     <style>wxFLP_USE_TEXTCTRL</style>
                   </object>
-                  <flag>wxEXPAND|wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
+                  <flag>wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
                   <border>4</border>
                 </object>
                 <object class="sizeritem">
@@ -223,7 +223,7 @@
                     <wildcard>*.crt</wildcard>
                     <style>wxFLP_USE_TEXTCTRL</style>
                   </object>
-                  <flag>wxEXPAND|wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
+                  <flag>wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
                   <border>4</border>
                 </object>
                 <object class="sizeritem">
@@ -239,7 +239,7 @@
                     <wildcard>*.key</wildcard>
                     <style>wxFLP_USE_TEXTCTRL</style>
                   </object>
-                  <flag>wxEXPAND|wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
+                  <flag>wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
                   <border>4</border>
                 </object>
                 <object class="sizeritem">
@@ -337,13 +337,13 @@
                         <label>Password</label>
                         <style>wxRB_GROUP</style>
                       </object>
-                      <flag>wxEXPAND|wxALIGN_CENTER_VERTICAL</flag>
+                      <flag>wxALIGN_CENTER_VERTICAL</flag>
                     </object>
                     <object class="sizeritem">
                       <object class="wxRadioButton" name="radioBtnKeyfile">
                         <label>Identity file</label>
                       </object>
-                      <flag>wxEXPAND|wxALIGN_CENTER_VERTICAL</flag>
+                      <flag>wxALIGN_CENTER_VERTICAL</flag>
                     </object>
                   </object>
                   <flag>wxALIGN_CENTRE_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
@@ -362,7 +362,7 @@
                     <wildcard>*</wildcard>
                     <style>wxFLP_USE_TEXTCTRL</style>
                   </object>
-                  <flag>wxEXPAND|wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
+                  <flag>wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
                   <border>0</border>
                 </object>
                 <object class="sizeritem">
@@ -378,7 +378,7 @@
                     <wildcard>*.pub</wildcard>
                     <style>wxFLP_USE_TEXTCTRL</style>
                   </object>
-                  <flag>wxEXPAND|wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
+                  <flag>wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
                   <border>4</border>
                 </object>
                 <object class="sizeritem">
@@ -491,7 +491,7 @@
             </object>
           </object>
         </object>
-        <flag>wxEXPAND|wxALIGN_CENTRE|wxALL</flag>
+        <flag>wxEXPAND|wxALL</flag>
         <border>3</border>
       </object>
       <object class="sizeritem">
@@ -530,7 +530,7 @@
         <object class="wxStatusBar" name="unkStatusBar">
           <style>wxST_SIZEGRIP</style>
         </object>
-        <flag>wxEXPAND|wxALIGN_CENTRE</flag>
+        <flag>wxEXPAND</flag>
         <border>3</border>
       </object>
     </object>

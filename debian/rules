@@ -1,0 +1,39 @@
+#!/usr/bin/make -f
+
+# See debhelper(7) (uncomment to enable).
+# Output every command that modifies files on the build system.
+#export DH_VERBOSE = 1
+
+
+# See FEATURE AREAS in dpkg-buildflags(1).
+#export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+# See ENVIRONMENT in dpkg-buildflags(1).
+# Package maintainers to append CFLAGS.
+#export DEB_CFLAGS_MAINT_APPEND  = -Wall -pedantic
+# Package maintainers to append LDFLAGS.
+#export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
+
+
+%:
+	dh $@
+
+override_dh_autoreconf:
+	dh_autoreconf ./bootstrap -- -- -f
+
+override_dh_auto_configure:
+	dh_auto_configure -- --disable-rpath --enable-databasedesigner
+
+override_dh_auto_install:
+	dh_auto_install
+	install -Dm0644 pgadmin3.desktop                        debian/tmp/usr/share/applications/pgadmin3.desktop
+	install -Dm0644 pgadmin/include/images/pgAdmin3-16.png  debian/tmp/usr/share/icons/hicolor/16x16/apps/pgadmin3.png
+	install -Dm0644 pgadmin/include/images/pgAdmin3-22.png  debian/tmp/usr/share/icons/hicolor/22x22/apps/pgadmin3.png
+	install -Dm0644 pgadmin/include/images/pgAdmin3-24.png  debian/tmp/usr/share/icons/hicolor/24x24/apps/pgadmin3.png
+	install -Dm0644 pgadmin/include/images/pgAdmin3-32.png  debian/tmp/usr/share/icons/hicolor/32x32/apps/pgadmin3.png
+	install -Dm0644 pgadmin/include/images/pgAdmin3-36.png  debian/tmp/usr/share/icons/hicolor/36x36/apps/pgadmin3.png
+	install -Dm0644 pgadmin/include/images/pgAdmin3-48.png  debian/tmp/usr/share/icons/hicolor/48x48/apps/pgadmin3.png
+	install -Dm0644 pgadmin/include/images/pgAdmin3-96.png  debian/tmp/usr/share/icons/hicolor/96x96/apps/pgadmin3.png
+	install -Dm0644 pgadmin/include/images/pgAdmin3-128.png debian/tmp/usr/share/icons/hicolor/128x128/apps/pgadmin3.png
+	install -Dm0644 pgadmin/include/images/pgAdmin3-256.png debian/tmp/usr/share/icons/hicolor/256x256/apps/pgadmin3.png
+	install -Dm0644 pgadmin/include/images/pgAdmin3.svg     debian/tmp/usr/share/icons/hicolor/scalable/apps/pgadmin3.svg

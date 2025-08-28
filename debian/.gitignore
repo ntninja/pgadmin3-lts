@@ -1,0 +1,8 @@
+pgadmin3-lts*/
+tmp/
+.debhelper/
+autoreconf.*
+debhelper-build-stamp
+files
+pgadmin3*.debhelper.log
+pgadmin3*.substvars

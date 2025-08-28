@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Name=pgAdmin3 LTS
+GenericName=PostgreSQL database administation and development platform
+Comment=Graphical administration tool for PostgreSQL
+Keywords=database;db;sql;query;administration;development;
+Exec=pgadmin3
+Icon=pgadmin3
+Categories=Application;Development;

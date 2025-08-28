@@ -1,0 +1,65 @@
+Source: pgadmin3-lts
+Section: database
+Priority: optional
+Maintainer: Erin of Yukis <erin-dev@ninetailed.ninja>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+ autotools-dev,
+ libpq-dev,
+ libwxgtk3.2-dev,
+ libxslt1-dev,
+ libssh2-1-dev,
+ libxml2-dev,
+ python3-sphinx,
+ python3-sphinxcontrib.htmlhelp,
+Standards-Version: 4.7.2
+Homepage: https://github.com/allentc/pgadmin3-lts/
+Vcs-Browser: https://github.com/allentc/pgadmin3-lts/
+Vcs-Git: https://github.com/allentc/pgadmin3-lts.git
+
+Package: pgadmin3-lts
+Architecture: any
+Depends:
+ pgadmin3-lts-data (= ${source:Version}),
+ ${shlibs:Depends},
+ ${misc:Depends},
+Recommends: pgadmin3-lts-doc
+Conflicts: pgadmin3
+Replaces: pgadmin3
+Description: Graphical administration tool for PostgreSQL
+ pgAdmin3 LTS is a database design and management application for use with 
+ PostgreSQL. The application can be used to manage any recent PostgreSQL
+ database server running on any platform.
+ .
+ pgAdmin3 LTS is designed to answer the needs of all users, from writing
+ simple SQL queries to developing complex databases. The graphical
+ interface supports all PostgreSQL features and makes administration
+ easy. The application also includes a syntax highlighting SQL editor, a
+ server-side code editor, an SQL/batch/shell job scheduling agent,
+ support for the Slony-I replication engine and much more. Server
+ connection may be made using TCP/IP or Unix Domain Sockets (on *nix
+ platforms), and may be SSL encrypted for security. No additional
+ drivers are required to communicate with the database server.
+
+Package: pgadmin3-lts-data
+Architecture: all
+Enhances: pgadmin3-lts
+Conflicts: pgadmin3
+Replaces: pgadmin3
+Description: Graphical administration tool for PostgreSQL – Data files
+ pgAdmin3 LTS is a database design and management application for use with 
+ PostgreSQL.
+ .
+ This package contains the architecture-independent data of pgAdmin3 LTS.
+
+Package: pgadmin3-lts-doc
+Architecture: all
+Enhances: pgadmin3-lts
+Conflicts: pgadmin3-data
+Replaces: pgadmin3-data
+Description: Graphical administration tool for PostgreSQL – Documentation
+ pgAdmin3 LTS is a database design and management application for use with 
+ PostgreSQL.
+ .
+ This package contains the documentation for pgAdmin3 LTS.

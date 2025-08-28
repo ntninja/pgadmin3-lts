@@ -13,6 +13,7 @@
 *.chm
 *.tmp
 *.dirstamp
+*~
 .DS_Store
 BuildLog.htm
 Makefile.in

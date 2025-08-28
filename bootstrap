@@ -18,11 +18,7 @@ SHORT_VER=`echo $LONG_VER | cut -d . -f1,2`
 sed -e "s/PGADMIN_LONG_VERSION/$LONG_VER/" -e "s/PGADMIN_SHORT_VERSION/$SHORT_VER/" configure.ac.in > configure.ac
 sed -e "s/PGADMIN_LONG_VERSION/$LONG_VER/" -e "s/PGADMIN_SHORT_VERSION/$SHORT_VER/" pkg/mac/pgadmin.Info.plist.in > pkg/mac/pgadmin.Info.plist
 sed -e "s/PGADMIN_LONG_VERSION/$LONG_VER/" -e "s/PGADMIN_SHORT_VERSION/$SHORT_VER/" pkg/mac/debug.pgadmin.Info.plist.in > pkg/mac/debug.pgadmin.Info.plist
-sed -e "s/PGADMIN_LONG_VERSION/$LONG_VER/" -e "s/PGADMIN_SHORT_VERSION/$SHORT_VER/" pkg/mandrake/pgadmin3.spec.in > pkg/mandrake/pgadmin3.spec
-sed -e "s/PGADMIN_LONG_VERSION/$LONG_VER/" -e "s/PGADMIN_SHORT_VERSION/$SHORT_VER/" pkg/redhat/pgadmin3.spec.in > pkg/redhat/pgadmin3.spec
-sed -e "s/PGADMIN_LONG_VERSION/$LONG_VER/" -e "s/PGADMIN_SHORT_VERSION/$SHORT_VER/" pkg/slackware/build-release.in > pkg/slackware/build-release
 sed -e "s/PGADMIN_LONG_VERSION/$LONG_VER/" -e "s/PGADMIN_SHORT_VERSION/$SHORT_VER/" pkg/src/build-tarball.in > pkg/src/build-tarball
-sed -e "s/PGADMIN_LONG_VERSION/$LONG_VER/" -e "s/PGADMIN_SHORT_VERSION/$SHORT_VER/" pkg/suse/pgadmin3.spec.in > pkg/suse/pgadmin3.spec
 
 sed -e "s/PGADMIN_LONG_VERSION/$LONG_VER/" -e "s/PGADMIN_SHORT_VERSION/$SHORT_VER/" docs/en_US/conf.py.in > docs/en_US/conf.py
 

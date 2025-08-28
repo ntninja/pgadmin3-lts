@@ -149,13 +149,8 @@ AC_CONFIG_FILES([Makefile
 		 plugins.d/Makefile
 		 pgadmin/Makefile
 		 pkg/Makefile
-		 pkg/debian/Makefile
 		 pkg/mac/Makefile
-		 pkg/mandrake/Makefile
-		 pkg/redhat/Makefile
-		 pkg/slackware/Makefile
 		 pkg/src/Makefile
-		 pkg/suse/Makefile
 		 pkg/win32/Makefile
 		 xtra/Makefile
 		 xtra/png2c/Makefile

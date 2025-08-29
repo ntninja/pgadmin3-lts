@@ -63,7 +63,7 @@
                         <label>Ascending</label>
                         <tooltip>Add the select column for ascending sort.</tooltip>
                       </object>
-                      <flag>wxEXPAND|wxALIGN_CENTRE_VERTICAL|wxALL</flag>
+                      <flag>wxALIGN_EXPAND|wxALL</flag>
                       <border>4</border>
                       <perspective>1</perspective>
                     </object>
@@ -72,7 +72,7 @@
                         <label>Descending</label>
                         <tooltip>Add the select column for descending sort.</tooltip>
                       </object>
-                      <flag>wxEXPAND|wxALIGN_CENTRE_VERTICAL|wxALL</flag>
+                      <flag>wxALIGN_EXPAND|wxALL</flag>
                       <border>4</border>
                       <perspective>1</perspective>
                     </object>
@@ -81,7 +81,7 @@
                         <label>Remove</label>
                         <tooltip>Remove the selected sort column.</tooltip>
                       </object>
-                      <flag>wxEXPAND|wxALIGN_CENTRE_VERTICAL|wxALL</flag>
+                      <flag>wxALIGN_EXPAND|wxALL</flag>
                       <border>4</border>
                       <perspective>1</perspective>
                     </object>
@@ -101,7 +101,7 @@
                   <object class="wxStaticText" name="lblFilter">
                     <label>Filter String (eg. oid &gt; 10 AND oid &lt; 50)</label>
                   </object>
-                  <flag>wxEXPAND|wxALIGN_CENTRE_VERTICAL|wxALL</flag>
+                  <flag>wxALIGN_EXPAND|wxALL</flag>
                   <border>4</border>
                 </object>
                 <object class="sizeritem">

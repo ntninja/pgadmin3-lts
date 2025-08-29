@@ -96,7 +96,7 @@
                     <size>86,123d</size>
                     <style>wxLB_NEEDED_SB|wxLB_SORT</style>
                   </object>
-                  <flag>wxEXPAND|wxALIGN_CENTRE_VERTICAL|wxALL</flag>
+                  <flag>wxALIGN_EXPAND|wxALL</flag>
                   <border>4</border>
                 </object>
                 <object class="sizeritem">
@@ -130,14 +130,14 @@
                     <size>86,123d</size>
                     <style>wxLB_NEEDED_SB|wxLB_SORT</style>
                   </object>
-                  <flag>wxEXPAND|wxALIGN_CENTRE_VERTICAL|wxALL</flag>
+                  <flag>wxALIGN_EXPAND|wxALL</flag>
                   <border>4</border>
                 </object>
               </object>
             </object>
           </object>
         </object>
-        <flag>wxALL|wxGROW|wxALIGN_CENTRE</flag>
+        <flag>wxALL|wxGROW</flag>
         <border>3</border>
       </object>
       <object class="sizeritem">

@@ -176,7 +176,7 @@
                       </object>
                       <flag>wxEXPAND|wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
                       <border>4</border>
-                      <flag>wxEXPAND|wxALIGN_CENTRE_VERTICAL</flag>
+                      <flag>wxALIGN_EXPAND</flag>
                     </object>
                     <object class="sizeritem">
                       <object class="wxStaticText" name="stValue">
@@ -190,7 +190,7 @@
                       </object>
                       <flag>wxEXPAND|wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
                       <border>4</border>
-                      <flag>wxEXPAND|wxALIGN_CENTRE_VERTICAL</flag>
+                      <flag>wxALIGN_EXPAND</flag>
                     </object>
                   </object>
                   <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM|wxALIGN_CENTRE_HORIZONTAL</flag>
@@ -222,7 +222,7 @@
             </object>
           </object>
         </object>
-        <flag>wxALL|wxGROW|wxALIGN_CENTRE</flag>
+        <flag>wxALL|wxGROW</flag>
         <border>3</border>
       </object>
       <object class="spacer">
@@ -270,7 +270,7 @@
         <object class="wxStatusBar" name="unkStatusBar">
           <style>wxST_SIZEGRIP</style>
         </object>
-        <flag>wxGROW|wxALIGN_CENTRE</flag>
+        <flag>wxGROW</flag>
         <border>3</border>
       </object>
     </object>

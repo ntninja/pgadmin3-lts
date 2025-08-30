@@ -1,0 +1,30 @@
+--- application.py   2025-08-28 14:39:46.514868940 +0200
++++ /usr/lib/python3/dist-packages/sphinx/application.py 2025-08-28 14:44:27.414862345 +0200
+@@ -20,7 +20,7 @@
+ from sphinx import locale, package_dir
+ from sphinx.config import ENUM, Config, _ConfigRebuild
+ from sphinx.environment import BuildEnvironment
+-from sphinx.errors import ApplicationError, ConfigError, VersionRequirementError
++from sphinx.errors import ApplicationError, ConfigError, VersionRequirementError, ExtensionError
+ from sphinx.events import EventManager
+ from sphinx.highlighting import lexer_classes
+ from sphinx.locale import __
+@@ -122,5 +122,6 @@
+     'alabaster',
+ )
+ builtin_extensions += _first_party_themes
++builtin_extensions += _first_party_extensions
+ 
+ ENV_PICKLE_FILENAME = 'environment.pickle'
+@@ -248,7 +249,10 @@
+         # load all built-in extension modules, first-party extension modules,
+         # and first-party themes
+         for extension in builtin_extensions:
+-            self.setup_extension(extension)
++            try:
++                self.setup_extension(extension)
++            except ExtensionError:
++                pass  # DEBIAN: Allow missing first-party extensions
+ 
+         # load all user-given extension modules
+         for extension in self.config.extensions:

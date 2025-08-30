@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
 
     strategy:
       fail-fast: false
@@ -18,7 +18,10 @@ jobs:
       run: sudo apt-get update
 
     - name: Install libraries
-      run: sudo apt-get install libwxgtk3.0-gtk3-dev libpq-dev libxml2-dev libxslt1-dev libssh2-1-dev python3-sphinx
+      run: sudo apt-get install autotools-dev libpq-dev libwxgtk3.2-dev libxslt1-dev libssh2-1-dev libxml2-dev python3-sphinx python3-sphinxcontrib.htmlhelp
+
+    - name: Workaround Debian bug \#1112319
+      run: sudo patch -u /usr/lib/python3/dist-packages/sphinx/application.py .github/workflows-helpers/01-ubuntu-sphinx-packaging.patch
 
     - name: Run bootstrap
       run: ./bootstrap
@@ -26,9 +29,9 @@ jobs:
     - name: Run configure
       env:
         ENABLE_DEBUG: "${{ matrix.build_conf == 'Debug' && 'yes' || 'no' }}"
-      run: ./configure --with-wx-version=3.0 --enable-databasedesigner --enable-debug=${{ env.ENABLE_DEBUG }}
+      run: ./configure --with-wx-version=3.2 --enable-databasedesigner --enable-debug=${{ env.ENABLE_DEBUG }}
 
     - name: Run make
-      run: | 
+      run: |
         make -j4 all
         sudo make install

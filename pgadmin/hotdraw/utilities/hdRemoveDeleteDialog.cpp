@@ -128,7 +128,7 @@ void hdRemoveDeleteDialog::CreateControls(const wxString &message)
 	topSizer->AddSpacer(10);
 	line = new wxStaticLine ( this, wxID_STATIC,
 	                          wxDefaultPosition, wxDefaultSize, wxLI_HORIZONTAL );
-	topSizer->Add(line, 0, wxGROW | wxALL, 5);
+	topSizer->Add(line, 0, wxEXPAND | wxALL, 5);
 
 	//Buttons Sizer
 	buttonsSizer = new wxBoxSizer(wxHORIZONTAL );

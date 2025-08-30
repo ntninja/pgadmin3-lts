@@ -24,7 +24,7 @@
                   <object class="wxStaticText" name="lblSortCols">
                     <label>Selected Columns</label>
                   </object>
-                  <flag>wxEXPAND|wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
+                  <flag>wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
                   <border>4</border>
                 </object>
                 <object class="sizeritem">
@@ -32,14 +32,14 @@
                     <style>wxLC_REPORT|wxLC_SINGLE_SEL</style>
                     <tooltip>Lists the columns that the data will be sorted by.</tooltip>
                   </object>
-                  <flag>wxEXPAND|wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
+                  <flag>wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
                   <border>4</border>
                 </object>
                 <object class="sizeritem">
                   <object class="wxStaticText" name="lblAvailCols">
                     <label>Available Columns</label>
                   </object>
-                  <flag>wxEXPAND|wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
+                  <flag>wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
                   <border>4</border>
                 </object>
                 <object class="sizeritem">
@@ -48,7 +48,7 @@
                     <style>wxCB_READONLY|wxCB_DROPDOWN</style>
                     <tooltip>Select a column to add to the sort list.</tooltip>
                   </object>
-                  <flag>wxEXPAND|wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
+                  <flag>wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
                   <border>4</border>
                 </object>
                 <object class="sizeritem">
@@ -108,7 +108,7 @@
                   <object class="ctlSQLBox" name="sqlFilter">
                     <tooltip>Enter the filter string to apply to the data. SQL syntax should be used as the string will be used as a 'WHERE' clause.</tooltip>
                   </object>
-                  <flag>wxEXPAND|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                  <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
                   <border>4</border>
                 </object>
                 <object class="sizeritem">
@@ -123,7 +123,7 @@
             </object>
           </object>
         </object>
-        <flag>wxEXPAND|wxALIGN_CENTRE|wxALL</flag>
+        <flag>wxALIGN_CENTRE|wxALL</flag>
         <border>3</border>
       </object>
       <object class="sizeritem">

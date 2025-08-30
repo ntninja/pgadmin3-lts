@@ -755,13 +755,13 @@ wxString pgTable::GetSql(ctlTree *browser)
 		       + GetOwnerSql(7, 3);
 		if (GetConnection()->BackendMinimumVersion(14, 0))
 		{
-			pgSet* set = ExecuteSet(
-				wxT("SELECT sn.nspname||'.'|| s.stxname AS statistics_name,\n")
-				wxT("  unnest(pg_get_statisticsobjdef_expressions(s.oid)) AS stat_expr\n")
-				wxT("FROM pg_statistic_ext s\n")
-				wxT("LEFT JOIN pg_namespace sn ON ((sn.oid = s.stxnamespace))\n")
-				wxT("WHERE stxrelid=") + GetOidStr()
-			);
+			pgSet *set = ExecuteSet(
+			                 wxT("SELECT sn.nspname||'.'|| s.stxname AS statistics_name,\n")
+			                 wxT("  unnest(pg_get_statisticsobjdef_expressions(s.oid)) AS stat_expr\n")
+			                 wxT("FROM pg_statistic_ext s\n")
+			                 wxT("LEFT JOIN pg_namespace sn ON ((sn.oid = s.stxnamespace))\n")
+			                 wxT("WHERE stxrelid=") + GetOidStr()
+			             );
 			if (set)
 			{
 				while (!set->Eof())

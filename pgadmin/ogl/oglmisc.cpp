@@ -105,7 +105,7 @@ void wxOGLCleanUp()
 wxFont *oglMatchFont(int point_size)
 {
 	wxFont *font = wxTheFontList->FindOrCreateFont(point_size, wxFONTFAMILY_SWISS,
-							wxFONTSTYLE_NORMAL, wxFONTWEIGHT_NORMAL);
+	               wxFONTSTYLE_NORMAL, wxFONTWEIGHT_NORMAL);
 #if 0
 	switch (point_size)
 	{

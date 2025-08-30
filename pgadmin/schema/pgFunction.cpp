@@ -287,7 +287,7 @@ wxString pgFunction::GetSql(ctlTree *browser)
 		wxString qtSig = GetQuotedFullIdentifier()  + wxT("(") + GetArgSigList() + wxT(")");
 
 		sql = wxT("-- Function: ") + qtSig + wxT("\n\n")
-			+ wxT("-- DROP FUNCTION ") + qtSig + wxT(";\n\n");
+		      + wxT("-- DROP FUNCTION ") + qtSig + wxT(";\n\n");
 
 		// Use Oracle style syntax for edb-spl functions
 		if (GetLanguage() == wxT("edbspl") && GetProcType() == 2)
@@ -306,9 +306,9 @@ wxString pgFunction::GetSql(ctlTree *browser)
 		{
 			if (GetLanguage() == wxT("sql"))
 			{
-				pgSet* set = ExecuteSet(
-					wxT("SELECT pg_get_functiondef(") + this->GetOidStr() + wxT(")")
-				);
+				pgSet *set = ExecuteSet(
+				                 wxT("SELECT pg_get_functiondef(") + this->GetOidStr() + wxT(")")
+				             );
 				if (set)
 				{
 					sql += set->GetVal(0);

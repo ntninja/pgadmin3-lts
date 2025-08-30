@@ -4,34 +4,71 @@ on: [push, pull_request]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on:  ${{ matrix.os }}
 
     strategy:
-      fail-fast: false
       matrix:
+        os: [ubuntu-22.04, ubuntu-24.04]
         build_conf: [Release, Debug]
+        exclude:
+          - os: ubuntu-22.04
+            build_conf: Debug
+
+    env:
+      WX_VERSION: "${{ matrix.os == 'ubuntu-22.04' && '3.0' || '3.2' }}"
 
     steps:
     - uses: actions/checkout@v2
 
+    # System setup
     - name: Update package lists
       run: sudo apt-get update
 
+    - name: Install Debian package tools
+      if: matrix.build_conf == 'Release'
+      run: sudo apt-get install build-essential debhelper-compat dpkg-dev
+
     - name: Install libraries
-      run: sudo apt-get install autotools-dev libpq-dev libwxgtk3.2-dev libxslt1-dev libssh2-1-dev libxml2-dev python3-sphinx python3-sphinxcontrib.htmlhelp
+      run: sudo apt-get install autotools-dev libpq-dev libwxgtk${{ env.WX_VERSION == '3.0' && '3.0-gtk3' || env.WX_VERSION }}-dev libxslt1-dev libssh2-1-dev libxml2-dev python3-sphinx python3-sphinxcontrib.htmlhelp
 
     - name: Workaround Debian bug \#1112319
-      run: sudo patch -u /usr/lib/python3/dist-packages/sphinx/application.py .github/workflows-helpers/01-ubuntu-sphinx-packaging.patch
+      run: sudo patch -u /usr/lib/python3/dist-packages/sphinx/application.py .github/workflows-helpers/01-${{ matrix.os }}-sphinx-packaging.patch
 
+    # Debug build from source
     - name: Run bootstrap
+      if: matrix.build_conf == 'Debug'
       run: ./bootstrap
 
     - name: Run configure
-      env:
-        ENABLE_DEBUG: "${{ matrix.build_conf == 'Debug' && 'yes' || 'no' }}"
-      run: ./configure --with-wx-version=3.2 --enable-databasedesigner --enable-debug=${{ env.ENABLE_DEBUG }}
+      if: matrix.build_conf == 'Debug'
+      run: ./configure --with-wx-version=${{ env.WX_VERSION }} --enable-databasedesigner --enable-debug=yes
 
     - name: Run make
+      if: matrix.build_conf == 'Debug'
       run: |
         make -j4 all
         sudo make install
+
+    # Release build to Debian package
+    - name: Run dpkg-buildpackage
+      if: matrix.build_conf == 'Release'
+      run: |
+        dpkg-buildpackage -j4
+
+        # Annotate created packages with OS code name
+        pushd ..
+        for filename in pgadmin3-lts*.{deb,buildinfo,tar.xz};
+        do
+          mv "${filename}" "${filename%%.*}_${{ matrix.os }}.${filename#*.}"
+        done
+        popd
+
+    # Publish Debian packages if tagged
+    - name: Release
+      uses: softprops/action-gh-release@v2
+      if: matrix.build_conf == 'Release' && github.ref_type == 'tag'
+      with:
+        files: |
+          ../pgadmin3-lts*.deb
+          ../pgadmin3-lts*.buildinfo
+          ../pgadmin3-lts*.tar.xz

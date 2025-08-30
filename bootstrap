@@ -1,4 +1,5 @@
 #!/bin/sh
+set -eu
 
 #######################################################################
 #
@@ -10,8 +11,26 @@
 #
 #######################################################################
 
+run_autoreconf=true
+while [ $# -gt 0 ];
+do
+	if [ "$1" = "--skip-autoreconf" ];
+	then
+		run_autoreconf=false
+		shift 1
+	elif [ "$1" = "--" ];
+	then
+		shift 1
+		break  # Options for autoreconf
+	else
+		echo "usage: ./bootstrap [--skip-autoreconf] [-- [autoreconf-param...]] " >&2
+		echo >&2
+		exit 1
+	fi
+done
+
 # Insert the version number wherever it's needed
-echo "Stamping the version number..."
+echo "Stamping the version number…" >&2
 LONG_VER=`grep '#define VERSION_PACKAGE' pgadmin/include/version.h | awk '{print $3}'`
 SHORT_VER=`echo $LONG_VER | cut -d . -f1,2`
 
@@ -22,17 +41,12 @@ sed -e "s/PGADMIN_LONG_VERSION/$LONG_VER/" -e "s/PGADMIN_SHORT_VERSION/$SHORT_VE
 
 sed -e "s/PGADMIN_LONG_VERSION/$LONG_VER/" -e "s/PGADMIN_SHORT_VERSION/$SHORT_VER/" docs/en_US/conf.py.in > docs/en_US/conf.py
 
-echo "Configuring the build system..."
+# Add extra automake configuration file
+mkdir -p config
+cp -f config.rpath.in config/config.rpath
 
-if [ ! -x config ]; then 
-  set -x
-  mkdir config
+if ${run_autoreconf};
+then
+	echo "Configuring the build system…" >&2
+	autoreconf -i "$@"
 fi
-
-set -x
-
-aclocal && \
-autoheader && \
-cp -f config.rpath.in config/config.rpath && \
-automake --foreign --add-missing --copy && \
-autoconf

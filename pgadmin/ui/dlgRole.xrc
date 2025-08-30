@@ -31,7 +31,7 @@
                 <object class="sizeritem">
                   <object class="wxTextCtrl" name="txtName">
                   </object>
-                  <flag>wxEXPAND|wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
+                  <flag>wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
                   <border>4</border>
                 </object>
                 <object class="sizeritem">
@@ -46,7 +46,7 @@
                   <object class="wxTextCtrl" name="txtOID">
                     <style>wxTE_READONLY</style>
                   </object>
-                  <flag>wxEXPAND|wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
+                  <flag>wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
                   <border>4</border>
                 </object>
                 <object class="sizeritem">
@@ -75,7 +75,7 @@
                     <content/>
                     <style>wxCB_READONLY|wxCB_DROPDOWN</style>
                   </object>
-                  <flag>wxEXPAND|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+                  <flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
                   <border>4</border>
                 </object>
               </object>
@@ -100,7 +100,7 @@
                   <object class="wxTextCtrl" name="txtPasswd">
                     <style>wxTE_PASSWORD</style>
                   </object>
-                  <flag>wxEXPAND|wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
+                  <flag>wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
                   <border>4</border>
                 </object>
                 <object class="sizeritem">
@@ -114,7 +114,7 @@
                   <object class="wxTextCtrl" name="txtRePasswd">
                     <style>wxTE_PASSWORD</style>
                   </object>
-                  <flag>wxEXPAND|wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
+                  <flag>wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
                   <border>4</border>
                 </object>
                 <object class="sizeritem">
@@ -134,7 +134,7 @@
                       <object class="wxCalendarBox" name="datValidUntil">
                         <style>wxDP_ALLOWNONE|wxDP_DROPDOWN</style>
                       </object>
-                      <flag>wxEXPAND|wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
+                      <flag>wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
                       <border>4</border>
                     </object>
                     <object class="sizeritem">
@@ -144,7 +144,7 @@
                       <border>4</border>
                     </object>
                   </object>
-                  <flag>wxEXPAND|wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
+                  <flag>wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
                   <border>0</border>
                 </object>
                 <object class="sizeritem">
@@ -176,7 +176,7 @@
                     <label>Can login</label>
                     <size>166,12d</size>
                   </object>
-                  <flag>wxEXPAND|wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
+                  <flag>wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
                   <border>4</border>
                 </object>
                 <object class="sizeritem">
@@ -276,7 +276,7 @@
                         <label>&gt;&gt;</label>
                         <size>18,-1d</size>
                       </object>
-                      <flag>wxEXPAND|wxALIGN_BOTTOM|wxALL</flag>
+                      <flag>wxALIGN_BOTTOM|wxALL</flag>
                       <border>4</border>
                     </object>
                     <object class="sizeritem">
@@ -284,7 +284,7 @@
                         <label>&lt;&lt;</label>
                         <size>18,-1d</size>
                       </object>
-                      <flag>wxEXPAND|wxALIGN_TOP|wxALL</flag>
+                      <flag>wxALIGN_TOP|wxALL</flag>
                       <border>4</border>
                     </object>
                   <flag>wxALIGN_CENTRE_VERTICAL|wxALL</flag>
@@ -330,7 +330,7 @@
                     <pos>5,6d</pos>
                     <style>wxLC_REPORT|wxLC_SINGLE_SEL</style>
                   </object>
-                  <flag>wxALL|wxGROW</flag>
+                  <flag>wxALL|wxEXPAND</flag>
                   <border>4</border>
                 </object>
                 <object class="sizeritem">
@@ -357,7 +357,7 @@
                       <border>4</border>
                     </object>
                   </object>
-                  <flag>wxALL|wxGROW</flag>
+                  <flag>wxALL|wxEXPAND</flag>
                   <border>3</border>
                 </object>
                 <object class="sizeritem">
@@ -378,7 +378,7 @@
                         <content/>
                         <style>wxCB_DROPDOWN</style>
                       </object>
-                      <flag>wxEXPAND|wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
+                      <flag>wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
                       <border>4</border>
                     </object>
                     <object class="sizeritem">
@@ -397,17 +397,17 @@
                         <object class="sizeritem">
                           <object class="wxTextCtrl" name="txtValue">
                           </object>
-                          <flag>wxEXPAND|wxALIGN_CENTER_VERTICAL</flag>
+                          <flag>wxALIGN_CENTER_VERTICAL</flag>
                         </object>
                         <object class="sizeritem">
                           <object class="wxCheckBox" name="chkValue">
                             <label></label>
                           </object>
-                          <flag>wxEXPAND|wxALIGN_CENTER_VERTICAL</flag>
+                          <flag>wxALIGN_CENTER_VERTICAL</flag>
                         </object>
-                        <flag>wxEXPAND|wxALIGN_CENTER_VERTICAL</flag>
+                        <flag>wxALIGN_CENTER_VERTICAL</flag>
                       </object>
-                      <flag>wxALL|wxGROW</flag>
+                      <flag>wxALL|wxEXPAND</flag>
                       <border>4</border>
                     </object>
                     <object class="sizeritem">
@@ -422,17 +422,17 @@
                         <content/>
                         <style>wxCB_DROPDOWN</style>
                       </object>
-                      <flag>wxEXPAND|wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
+                      <flag>wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
                       <border>4</border>
                     </object>
                   </object>
-                  <flag>wxGROW</flag>
+                  <flag>wxEXPAND</flag>
                 </object>
               </object>
             </object>
           </object>
         </object>
-        <flag>wxEXPAND|wxALIGN_CENTRE|wxALL</flag>
+        <flag>wxALIGN_CENTRE|wxALL</flag>
         <border>3</border>
       </object>
       <object class="sizeritem">
@@ -471,7 +471,7 @@
         <object class="wxStatusBar" name="unkStatusBar">
           <style>wxST_SIZEGRIP</style>
         </object>
-        <flag>wxEXPAND|wxALIGN_CENTRE</flag>
+        <flag>wxALIGN_CENTRE</flag>
         <border>3</border>
       </object>
     </object>

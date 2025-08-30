@@ -44,7 +44,7 @@
                   <cols>3</cols>
                   <growablecols>2</growablecols>
                 </object>
-                <flag>wxTOP|wxLEFT|wxRIGHT|wxGROW</flag>
+                <flag>wxTOP|wxLEFT|wxRIGHT|wxEXPAND</flag>
                 <border>5</border>
               </object>
               <object class="spacer">
@@ -88,12 +88,12 @@
               </object>
               <growablerows>2</growablerows>
             </object>
-            <flag>wxALL|wxGROW</flag>
+            <flag>wxALL|wxEXPAND</flag>
           </object>
           <growablerows>0</growablerows>
           <growablecols>2</growablecols>
         </object>
-        <flag>wxTOP|wxLEFT|wxRIGHT|wxGROW</flag>
+        <flag>wxTOP|wxLEFT|wxRIGHT|wxEXPAND</flag>
         <border>5</border>
       </object>
       <object class="sizeritem">

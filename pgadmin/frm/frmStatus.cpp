@@ -553,7 +553,7 @@ void frmStatus::AddStatusPane()
 #ifdef __WXMAC__
 	wxSystemOptions::SetOption(wxT("mac.listctrl.always_use_generic"), false);
 #endif
-	grdActivity->Add(lstStatus, 0, wxGROW, 3);
+	grdActivity->Add(lstStatus, 0, wxEXPAND, 3);
 
 	// Add the panel to the notebook
 	manager.AddPane(pnlActivity,
@@ -657,7 +657,7 @@ void frmStatus::AddLockPane()
 #ifdef __WXMAC__
 	wxSystemOptions::SetOption(wxT("mac.listctrl.always_use_generic"), false);
 #endif
-	grdLock->Add(lstLocks, 0, wxGROW, 3);
+	grdLock->Add(lstLocks, 0, wxEXPAND, 3);
 
 	// Add the panel to the notebook
 	manager.AddPane(pnlLock,
@@ -746,7 +746,7 @@ void frmStatus::AddXactPane()
 #ifdef __WXMAC__
 	wxSystemOptions::SetOption(wxT("mac.listctrl.always_use_generic"), false);
 #endif
-	grdXacts->Add(lstXacts, 0, wxGROW, 3);
+	grdXacts->Add(lstXacts, 0, wxEXPAND, 3);
 
 	// Add the panel to the notebook
 	manager.AddPane(pnlXacts,
@@ -849,7 +849,7 @@ void frmStatus::AddLogPane()
 #ifdef __WXMAC__
 	wxSystemOptions::SetOption(wxT("mac.listctrl.always_use_generic"), false);
 #endif
-	grdLog->Add(lstLog, 0, wxGROW, 3);
+	grdLog->Add(lstLog, 0, wxEXPAND, 3);
 
 	// Add the panel to the notebook
 	manager.AddPane(pnlLog,

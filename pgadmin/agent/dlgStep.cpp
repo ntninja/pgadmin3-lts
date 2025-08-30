@@ -66,7 +66,7 @@ dlgStep::dlgStep(pgaFactory *f, frmMain *frame, pgaStep *node, pgaJob *j)
 
 	wxWindow *placeholder = CTRL_TEXT("txtSqlBox");
 	wxSizer *sizer = placeholder->GetContainingSizer();
-	sizer->Add(sqlBox, 1, wxRIGHT | wxGROW, 5);
+	sizer->Add(sqlBox, 1, wxRIGHT | wxEXPAND, 5);
 	sizer->Detach(placeholder);
 	delete placeholder;
 	sizer->Layout();

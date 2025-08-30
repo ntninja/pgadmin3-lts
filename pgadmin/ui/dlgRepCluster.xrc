@@ -95,7 +95,7 @@
                       <border>4</border>
                     </object>
                   </object>
-                  <flag>wxEXPAND|wxALIGN_CENTER_VERTICAL</flag>
+                  <flag>wxALIGN_CENTER_VERTICAL</flag>
                 </object>
                 <object class="sizeritem">
                   <object class="wxStaticText" name="stNode">
@@ -123,7 +123,7 @@
                       <border>4</border>
                     </object>
                   </object>
-                  <flag>wxEXPAND|wxALIGN_CENTER_VERTICAL</flag>
+                  <flag>wxALIGN_CENTER_VERTICAL</flag>
                 </object>
                 <object class="sizeritem">
                   <object class="wxStaticText" name="stAdminNode">
@@ -157,7 +157,7 @@
                           <border>4</border>
                         </object>
                       </object>
-                      <flag>wxEXPAND|wxALIGN_CENTER_VERTICAL</flag>
+                      <flag>wxALIGN_CENTER_VERTICAL</flag>
                     </object>
                     <object class="sizeritem">
                       <object class="wxComboBox" name="cbAdminNode">
@@ -168,7 +168,7 @@
                       <border>4</border>
                     </object>
                   </object>
-                  <flag>wxEXPAND|wxALIGN_CENTER_VERTICAL</flag>
+                  <flag>wxALIGN_CENTER_VERTICAL</flag>
                 </object>
                 <object class="sizeritem">
                   <object class="wxStaticText" name="stComment">
@@ -188,7 +188,7 @@
             </object>
           </object>
         </object>
-        <flag>wxEXPAND|wxALIGN_CENTRE|wxALL</flag>
+        <flag>wxALIGN_CENTRE|wxALL</flag>
         <border>3</border>
       </object>
       <object class="sizeritem">
@@ -227,7 +227,7 @@
         <object class="wxStatusBar" name="unkStatusBar">
           <style>wxST_SIZEGRIP</style>
         </object>
-        <flag>wxEXPAND|wxALIGN_CENTRE</flag>
+        <flag>wxALIGN_CENTRE</flag>
         <border>3</border>
       </object>
     </object>

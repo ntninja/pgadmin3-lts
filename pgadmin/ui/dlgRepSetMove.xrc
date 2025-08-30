@@ -30,7 +30,7 @@
                 <object class="sizeritem">
                   <object class="wxTextCtrl" name="txtID">
                   </object>
-                  <flag>wxEXPAND|wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
+                  <flag>wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
                   <border>4</border>
                 </object>
                 <object class="sizeritem">
@@ -52,7 +52,7 @@
             </object>
           </object>
         </object>
-        <flag>wxEXPAND|wxALIGN_CENTRE|wxALL</flag>
+        <flag>wxALIGN_CENTRE|wxALL</flag>
         <border>3</border>
       </object>
       <object class="sizeritem">

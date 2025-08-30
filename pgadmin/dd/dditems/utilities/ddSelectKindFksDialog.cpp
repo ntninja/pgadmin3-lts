@@ -119,7 +119,7 @@ void ddSelectKindFksDialog::CreateControls()
 	// A dividing line before the mapping items and kind of mapping
 	line = new wxStaticLine ( this, wxID_STATIC,
 	                          wxDefaultPosition, wxDefaultSize, wxLI_HORIZONTAL );
-	topSizer->Add(line, 0, wxGROW | wxALL, 5);
+	topSizer->Add(line, 0, wxEXPAND | wxALL, 5);
 
 
 	//Hack to allow multiple pairs of wxStaticText wxchoice at dialog
@@ -131,7 +131,7 @@ void ddSelectKindFksDialog::CreateControls()
 
 	line = new wxStaticLine ( this, wxID_STATIC,
 	                          wxDefaultPosition, wxDefaultSize, wxLI_HORIZONTAL );
-	topSizer->Add(line, 0, wxGROW | wxALL, 5);
+	topSizer->Add(line, 0, wxEXPAND | wxALL, 5);
 
 	// A horizontal box sizer to contain Reset, OK, Cancel and Help
 
@@ -209,7 +209,7 @@ void ddSelectKindFksDialog::populateColumnsControls(bool primaryKey, int useUkIn
 			ddSelectFkKindLine *newLineControls = new ddSelectFkKindLine(this, sourceCols[i], destCols, eventID);
 			choices[ sourceCols[i] ] = newLineControls;
 			linesSizer->Add(newLineControls->sourceCtrl, 0, wxALIGN_LEFT | wxALL, 5);
-			linesSizer->Add(newLineControls->destinationCtrl, 0, wxGROW | wxALL, 5);
+			linesSizer->Add(newLineControls->destinationCtrl, 0, wxEXPAND | wxALL, 5);
 		}
 	}
 	else
@@ -229,7 +229,7 @@ void ddSelectKindFksDialog::populateColumnsControls(bool primaryKey, int useUkIn
 			ddSelectFkKindLine *newLineControls = new ddSelectFkKindLine(this, sourceCols[i], destCols, eventID);
 			choices[ sourceCols[i] ] = newLineControls;
 			linesSizer->Add(newLineControls->sourceCtrl, 0, wxALIGN_LEFT | wxALL, 5);
-			linesSizer->Add(newLineControls->destinationCtrl, 0, wxGROW | wxALL, 5);
+			linesSizer->Add(newLineControls->destinationCtrl, 0, wxEXPAND | wxALL, 5);
 		}
 	}
 	this->Layout();

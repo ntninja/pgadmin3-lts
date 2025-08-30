@@ -45,31 +45,31 @@ jobs:
       working-directory: ${{env.GITHUB_WORKSPACE}}
       shell: pwsh
       run: |
-        Invoke-WebRequest -Uri "https://github.com/wxWidgets/wxWidgets/releases/download/v3.0.5/wxWidgets-3.0.5-headers.7z" -OutFile wxWidgets-headers.7z
-        7z.exe x wxWidgets-headers.7z -o${{env.WXWIN}}
+        Invoke-WebRequest -Uri "https://github.com/wxWidgets/wxWidgets/releases/download/v3.3.1/wxWidgets-3.3.1-headers.7z" -OutFile wxWidgets-headers.7z
+        7z.exe x -aoa wxWidgets-headers.7z -o${{env.WXWIN}}
 
     - name: Download and unpack wxWidgets source
       if: ${{ matrix.build_conf == 'Release' }}
       working-directory: ${{env.GITHUB_WORKSPACE}}
       shell: pwsh
       run: |
-        Invoke-WebRequest -Uri "https://github.com/wxWidgets/wxWidgets/releases/download/v3.0.5/wxWidgets-3.0.5.7z" -OutFile wxWidgets-source.7z
-        7z.exe x wxWidgets-source.7z -o${{env.WXWIN}}
+        Invoke-WebRequest -Uri "https://github.com/wxWidgets/wxWidgets/releases/download/v3.3.1/wxWidgets-3.3.1.7z" -OutFile wxWidgets-source.7z
+        7z.exe x -aoa wxWidgets-source.7z -o${{env.WXWIN}}
 
     - name: Download and unpack wxWidgets developer files
       working-directory: ${{env.GITHUB_WORKSPACE}}
       shell: pwsh
       run: |
-        Invoke-WebRequest -Uri "https://github.com/wxWidgets/wxWidgets/releases/download/v3.0.5/wxMSW-3.0.5_vc142_Dev.7z" -OutFile wxWidgets-devel.7z
-        7z.exe x wxWidgets-devel.7z -o${{env.WXWIN}}
+        Invoke-WebRequest -Uri "https://github.com/wxWidgets/wxWidgets/releases/download/v3.3.1/wxMSW-3.3.1_vc14x_x64_Dev.7z" -OutFile wxWidgets-devel.7z
+        7z.exe x -aoa wxWidgets-devel.7z -o${{env.WXWIN}}
 
     - name: Download and unpack wxWidgets release libraries
       if: ${{ matrix.build_conf == 'Release' }}
       working-directory: ${{env.GITHUB_WORKSPACE}}
       shell: pwsh
       run: |
-        Invoke-WebRequest -Uri "https://github.com/wxWidgets/wxWidgets/releases/download/v3.0.5/wxMSW-3.0.5_vc142_ReleaseDLL.7z" -OutFile wxWidgets-libraries.7z
-        7z.exe x wxWidgets-libraries.7z -o${{env.WXWIN}}
+        Invoke-WebRequest -Uri "https://github.com/wxWidgets/wxWidgets/releases/download/v3.3.1/wxMSW-3.3.1_vc14x_x64_ReleaseDLL.7z" -OutFile wxWidgets-libraries.7z
+        7z.exe x -aoa wxWidgets-libraries.7z -o${{env.WXWIN}}
 
     - name: Download and unpack PostgreSQL
       working-directory: ${{env.GITHUB_WORKSPACE}}

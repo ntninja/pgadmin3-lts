@@ -1,0 +1,36 @@
+--- /usr/lib/python3/dist-packages/sphinx/application.py.orig 2025-08-31 13:41:25.132994303 +0200
++++ /usr/lib/python3/dist-packages/sphinx/application.py   2025-08-31 13:43:11.212492029 +0200
+@@ -34,7 +34,7 @@
+ from sphinx.domains import Domain, Index
+ from sphinx.environment import BuildEnvironment
+ from sphinx.environment.collectors import EnvironmentCollector
+-from sphinx.errors import ApplicationError, ConfigError, VersionRequirementError
++from sphinx.errors import ApplicationError, ConfigError, VersionRequirementError, ExtensionError
+ from sphinx.events import EventManager
+ from sphinx.extension import Extension
+ from sphinx.highlighting import lexer_classes
+@@ -107,6 +107,12 @@
+     'sphinx.environment.collectors.metadata',
+     'sphinx.environment.collectors.title',
+     'sphinx.environment.collectors.toctree',
++    # 1st party extensions
++    'sphinxcontrib.applehelp',
++    'sphinxcontrib.devhelp',
++    'sphinxcontrib.htmlhelp',
++    'sphinxcontrib.serializinghtml',
++    'sphinxcontrib.qthelp',
+     # Strictly, alabaster theme is not a builtin extension,
+     # but it is loaded automatically to use it as default theme.
+     'alabaster',
+@@ -224,7 +230,10 @@
+ 
+         # load all built-in extension modules
+         for extension in builtin_extensions:
+-            self.setup_extension(extension)
++            try:
++                self.setup_extension(extension)
++            except ExtensionError:
++                pass  # DEBIAN: Allow missing first-party extensions
+ 
+         # load all user-given extension modules
+         for extension in self.config.extensions:

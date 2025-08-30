@@ -151,7 +151,7 @@
                       <object class="wxCheckListBox" name="lstDisplay">
                         <content/>
                       </object>
-                      <flag>wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
+                      <flag>wxEXPAND|wxTOP|wxLEFT|wxRIGHT</flag>
                       <border>4</border>
                     </object>
                     <object class="sizeritem">
@@ -163,7 +163,7 @@
                     </object>
                   </object>
                 </object>
-                <flag>wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
+                <flag>wxEXPAND|wxTOP|wxLEFT|wxRIGHT</flag>
                 <border>4</border>
               </object>
               <object class="sizeritem">
@@ -188,7 +188,7 @@
                     </object>
                   </object>
                 </object>
-                <flag>wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
+                <flag>wxEXPAND|wxTOP|wxLEFT|wxRIGHT</flag>
                 <border>4</border>
               </object>
               <object class="sizeritem">
@@ -212,7 +212,7 @@
                         <message>Select directory with Slony-I creation scripts</message>
                         <style>wxDIRP_USE_TEXTCTRL</style>
                       </object>
-                      <flag>wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
+                      <flag>wxEXPAND|wxTOP|wxLEFT|wxRIGHT</flag>
                       <border>4</border>
                     </object>
                     <object class="sizeritem">
@@ -227,7 +227,7 @@
                         <message>Select directory with PostgreSQL utilities</message>
                         <style>wxDIRP_USE_TEXTCTRL</style>
                       </object>
-                      <flag>wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
+                      <flag>wxEXPAND|wxTOP|wxLEFT|wxRIGHT</flag>
                       <border>4</border>
                     </object>
                     <object class="sizeritem">
@@ -242,7 +242,7 @@
                         <message>Select directory with EnterpriseDB utilities</message>
                         <style>wxDIRP_USE_TEXTCTRL</style>
                       </object>
-                      <flag>wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
+                      <flag>wxEXPAND|wxTOP|wxLEFT|wxRIGHT</flag>
                       <border>4</border>
                     </object>
                     <object class="sizeritem">
@@ -257,7 +257,7 @@
                         <message>Select directory with GreenplumDB utilities</message>
                         <style>wxDIRP_USE_TEXTCTRL</style>
                       </object>
-                      <flag>wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
+                      <flag>wxEXPAND|wxTOP|wxLEFT|wxRIGHT</flag>
                       <border>4</border>
                     </object>
                     <object class="sizeritem">
@@ -271,7 +271,7 @@
                       <object class="wxCheckBox" name="chkIgnoreVersion">
                         <label>Ignore server/utility version mismatches</label>
                       </object>
-                      <flag>wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
+                      <flag>wxEXPAND|wxTOP|wxLEFT|wxRIGHT</flag>
                       <border>4</border>
                     </object>
                     <object class="sizeritem">
@@ -284,13 +284,14 @@
                     <object class="sizeritem">
                       <object class="wxStaticText" name="stVersionMismatchWarning">
                         <label>Warning: Backup or restore operations may fail if the PostgreSQL utilities do not match the server version.</label>
+                        <flag>wxST_ELLIPSIZE_END</flag>
                       </object>
-                      <flag>wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
+                      <flag>wxEXPAND|wxTOP|wxLEFT|wxRIGHT</flag>
                       <border>4</border>
                     </object>
                   </object>
                 </object>
-                <flag>wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
+                <flag>wxEXPAND|wxTOP|wxLEFT|wxRIGHT</flag>
                 <border>4</border>
               </object>
               <object class="sizeritem">
@@ -316,7 +317,7 @@
                         </object>
                         <object class="sizeritem">
                           <object class="wxFontPickerCtrl" name="pickerFont"/>
-                          <flag>wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
+                          <flag>wxEXPAND|wxTOP|wxLEFT|wxRIGHT</flag>
                           <border>4</border>
                         </object>
                       </object>
@@ -328,7 +329,7 @@
                         <label>Confirm object deletion</label>
                         <checked>1</checked>
                       </object>
-                      <flag>wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
+                      <flag>wxEXPAND|wxTOP|wxLEFT|wxRIGHT</flag>
                       <border>4</border>
                     </object>
                     <object class="sizeritem">
@@ -336,7 +337,7 @@
                         <label>Show System Objects in the treeview</label>
                         <checked>0</checked>
                       </object>
-                      <flag>wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
+                      <flag>wxEXPAND|wxTOP|wxLEFT|wxRIGHT</flag>
                       <border>4</border>
                     </object>
                     <object class="sizeritem">
@@ -344,7 +345,7 @@
                         <label>Show users for privileges</label>
                       <checked>0</checked>
                       </object>
-                      <flag>wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
+                      <flag>wxEXPAND|wxTOP|wxLEFT|wxRIGHT</flag>
                       <border>4</border>
                     </object>
                     <object class="sizeritem">
@@ -352,7 +353,7 @@
                         <label>Show object properties on double click in treeview</label>
                         <checked>0</checked>
                       </object>
-                      <flag>wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
+                      <flag>wxEXPAND|wxTOP|wxLEFT|wxRIGHT</flag>
                       <border>4</border>
                     </object>
                     <object class="sizeritem">
@@ -360,7 +361,7 @@
                         <label>Show NOTICEs</label>
                         <checked>0</checked>
                       </object>
-                      <flag>wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
+                      <flag>wxEXPAND|wxTOP|wxLEFT|wxRIGHT</flag>
                       <border>4</border>
                     </object>
                     <object class="sizeritem">
@@ -385,17 +386,17 @@
                             </content>
                             <style>wxCB_READONLY|wxCB_DROPDOWN</style>
                           </object>
-                          <flag>wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
+                          <flag>wxEXPAND|wxTOP|wxLEFT|wxRIGHT</flag>
                           <border>4</border>
                         </object>
 
                       </object>
-                      <flag>wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
+                      <flag>wxEXPAND|wxTOP|wxLEFT|wxRIGHT</flag>
                       <border>4</border>
                     </object>
                   </object>
                 </object>
-              <flag>wxALIGN_CENTER_VERTICAL|wxTOP|wxLEFT|wxRIGHT</flag>
+              <flag>wxEXPAND|wxTOP|wxLEFT|wxRIGHT</flag>
               <border>4</border>
             </object>
             <object class="sizeritem">

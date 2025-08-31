@@ -59,7 +59,7 @@ jobs:
         pushd ..
         for filename in pgadmin3-lts*.{deb,buildinfo,tar.xz};
         do
-          mv "${filename}" "${filename%%.*}_${{ matrix.os }}.${filename#*.}"
+          mv "${filename}" "${filename%%_*}_ubuntu-22.04_${filename#*_}"
         done
         popd
 

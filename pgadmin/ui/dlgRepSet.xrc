@@ -67,7 +67,7 @@
                     <size>135,60d</size>
                     <style>wxTE_MULTILINE</style>
                   </object>
-                  <flag>wxALIGN_EXPAND|wxALL</flag>
+                  <flag>wxALIGN_CENTER|wxALL</flag>
                   <border>4</border>
                 </object>
               </object>

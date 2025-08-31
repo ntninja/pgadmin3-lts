@@ -1,8 +1,8 @@
-pgadmin3-lts (20230521) UNRELEASED; urgency=medium
+pgadmin3-lts (1.23.1b) UNRELEASED; urgency=medium
 
-  * Initial rerelease.
+  * New upstream release.
 
- -- Erin of Yukis <erin-dev@ninetailed.ninja>  Thu, 28 Aug 2025 11:59:19 +0200
+ -- Erin of Yukis <erin-dev@ninetailed.ninja>  Sun, 31 Aug 2025 15:12:59 +0200
 
 pgadmin3 (1.6.0-0.beta2.1) experimental; urgency=low
 

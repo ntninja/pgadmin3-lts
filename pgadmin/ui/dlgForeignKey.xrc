@@ -276,7 +276,7 @@
                     <dimension>1</dimension>
                     <style>wxRA_SPECIFY_COLS</style>
                   </object>
-                  <flag>wxALIGN_EXPAND|wxALL</flag>
+                  <flag>wxALIGN_CENTER|wxALL</flag>
                   <border>4</border>
                 </object>
                 <object class="sizeritem">
